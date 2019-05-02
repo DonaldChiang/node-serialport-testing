@@ -5,24 +5,31 @@
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Error reproduction
+1. clone this repository
+2. run `yarn install`
+3. run `yarn electron:build:windows` on Mac
+4. copy `node-serialport-testing Setup 0.1.0.exe` to Windows and install
+5. and you can see this error:
+
 ```
-yarn run serve
+A JavaScript error occurred in the main process
+
+Uncaught Exception:
+Error: \\?\C:\Users\MyUser\AppData\Local\Temp\4deb32d9-50e4.....bf7b.tmp.node is not a valid Wind32 application.
 ```
 
-### Compiles and minifies for production
+### Run electron
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+yarn electron:serve
 ```
 
-### Lints and fixes files
+### Build multiple platforms electron
 ```
-yarn run lint
+yarn electron:build:windows
+yarn electron:build:macos
+yarn electron:build:linux
+yarn electron:build:all
 ```
 
 ### Customize configuration
