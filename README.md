@@ -8,7 +8,7 @@ yarn install
 ### Error reproduction
 1. clone this repository
 2. run `yarn install`
-3. run `yarn electron:build:windows` on Mac
+3. run `yarn electron:build:windows` on Mac or Linux
 4. copy `node-serialport-testing Setup 0.1.0.exe` to Windows and install
 5. and you can see this error:
 
