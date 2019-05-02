@@ -4,18 +4,19 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --no-clean",
     "lint": "vue-cli-service lint",
     "electron:build:all": "vue-cli-service electron:build --mac --win --linux",
     "electron:build:windows": "vue-cli-service electron:build --win",
     "electron:build:macos": "vue-cli-service electron:build --mac",
     "electron:build:linux": "vue-cli-service electron:build --linux",
     "electron:serve": "vue-cli-service electron:serve",
-    "install": "prebuild-install || electron-rebuild --build-from-source"
+    "install": "electron-rebuild"
   },
   "main": "background.js",
   "dependencies": {
     "core-js": "^2.6.5",
+    "electron-rebuild": "^1.8.4",
     "serialport": "6.2.2",
     "vue": "^2.6.10"
   },
@@ -24,9 +25,8 @@
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
     "babel-eslint": "^10.0.1",
-    "electron": "4.0.5",
+    "electron": "4.1.5",
     "electron-builder": "20.34.0",
-    "electron-rebuild": "^1.8.4",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "prebuild": "^8.2.1",
